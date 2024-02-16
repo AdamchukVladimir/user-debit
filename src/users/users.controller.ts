@@ -10,9 +10,6 @@ export class UsersController {
 
   @Post(':id/debit') // AmountValidationPipe - только положительные числа
   async debitBalance(@Param('id') id: number, @Body('amount', AmountValidationPipe) amount: number): Promise<void> {
-    //const { amount } = body;
-    console.log("сумма - " + amount);
-    await this.usersService.debitBalance(id, amount);
-    
+    await this.usersService.debitBalance(id, amount);    
   }  
 }
