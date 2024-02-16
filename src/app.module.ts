@@ -17,7 +17,7 @@ import { PaymentHistoryModule } from './payment-history/payment-history.module';
     port: Number(process.env.POSTGRESS_PORT),
     username: process.env.POSTGRES_USER,
     password: process.env.POSTGRESS_PASSWORD,
-    database: 'debit',//process.env.POSTGRESS_DB,
+    database: process.env.POSTGRESS_DB,
     models: [User, PaymentHistory],
     autoLoadModels: true 
   }), UsersModule, PaymentHistoryModule,],
